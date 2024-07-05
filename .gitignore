@@ -1,0 +1,147 @@
+# .NET Core
+bin/
+obj/
+out/
+*.db
+*.db-journal
+*.pdb
+
+# Build directories (npm/yarn/parcel)
+dist/
+node_modules/
+
+# VS Code
+.vscode/
+
+# User-specific files
+*.swp
+*~
+.project
+.idea/
+.DS_Store
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+*.sln.iml
+
+# VS for Mac
+*.pidb
+*.svd
+
+# Mono auto generated files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Logs
+*.log
+
+# Tye
+.tye/
+
+# DotNet specific files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# MSTest test Results
+TestResults
+
+# Service Fabric Local Cluster
+sfctl
+
+# Npm
+npm-debug.log
+yarn-error.log
+
+# Node - OSX
+npm-debug.log*
+
+# Node - Windows
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Optional pre-built application directory
+build/
+
+# dotenv environment variable files
+.env
+.env.local
+.env.*.local
+
+# Angular
+.angular/cache
+.angular
+
+# Npm
+package-lock.json
+
+# Backup files
+*.bak
+*.old
+*.orig
+*.tmp
+*.swp
+
+# macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear when mounting a volume
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
