@@ -1,5 +1,8 @@
+using HtmlAgilityPack;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
 
 public class UrlLoaderService : IUrlLoaderService
 {
@@ -19,7 +22,8 @@ public class UrlLoaderService : IUrlLoaderService
             try
             {
                 var response = await _httpClient.GetStringAsync(url);
-                urlData[url] = response;
+                var content = ExtractContentFromHtml(response);
+                urlData[url] = content;
             }
             catch (Exception ex)
             {
@@ -28,5 +32,20 @@ public class UrlLoaderService : IUrlLoaderService
         }
 
         return urlData;
+    }
+
+    private string ExtractContentFromHtml(string html)
+    {
+        var doc = new HtmlDocument();
+        doc.LoadHtml(html);
+
+        // Remove script and style elements
+        doc.DocumentNode.Descendants()
+            .Where(n => n.Name == "script" || n.Name == "style")
+            .ToList()
+            .ForEach(n => n.Remove());
+
+        // Extract the inner text from the remaining HTML
+        return doc.DocumentNode.InnerText;
     }
 }

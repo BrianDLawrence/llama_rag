@@ -24,7 +24,7 @@ namespace UrlProcessorApi.Tests.Services
                 .ReturnsAsync(new HttpResponseMessage
                 {
                     StatusCode = System.Net.HttpStatusCode.OK,
-                    Content = new StringContent("Test content")
+                    Content = new StringContent("<html><body><p>Test content</p><script>console.log('test');</script></body></html>")
                 });
 
             var httpClient = new HttpClient(mockHttpMessageHandler.Object);
