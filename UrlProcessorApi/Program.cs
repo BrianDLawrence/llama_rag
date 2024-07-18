@@ -1,6 +1,10 @@
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddHttpClient<UrlLoaderService>();
+builder.Services.AddScoped<IUrlLoaderService, UrlLoaderService>();
+builder.Services.AddScoped<IContentExtractor, ContentExtractor>();
+
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
